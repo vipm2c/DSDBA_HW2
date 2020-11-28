@@ -20,19 +20,25 @@ def generate():
 
 
 def main():
-    opts, args = getopt.getopt(sys.argv[1:], "c:s:", ["count=", "server="])
+    opts, args = getopt.getopt(sys.argv[1:], "c:s:l:p:", ["count=", "server=", "login=", "password="])
     count = 0
     server = ""
+    login = ""
+    password = ""
     for o, a in opts:
         if o in ("-c", "--count"):
             count = int(a)
         elif o in ("-s", "--server"):
             server = a
+        elif o in ("-l", "--login"):
+            login = a
+        elif o in ("-p", "--password"):
+            password = a
         else:
             print("unhandled option")
 
-    conn = psycopg2.connect(dbname='hw2', user='postgres',
-                            password='postgres', host=server)
+    conn = psycopg2.connect(dbname='hw2', user=login,
+                            password=password, host=server)
     cursor = conn.cursor()
     for i in range(0, count):
         insert = sql.SQL('INSERT INTO "public"."data"(key,timestamp,value) VALUES ('+generate()+')')
