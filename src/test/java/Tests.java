@@ -12,7 +12,7 @@ public class Tests {
     private ComputeLog log = new ComputeLog(10, date, 100);
 
     @Test
-    public void testCheckIP() throws IOException {
+    public void testRoundTime() throws IOException {
         log.scaleTimeStamp("1m");
 
         assertEquals(1601520000, log.getTime().getTime());
