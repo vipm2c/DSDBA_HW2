@@ -65,11 +65,4 @@ pom.xml - конфигурационный файл для сборки.
     generator.py -c <Количество генерируемых строк> -s <IP адрес БД Postgres> -l <Login> -p <Password>
     ```
  
-## Текущий статус
-|Требование лабораторной  |Статус   |
-|---|---|
-|2.	Program which aggregate raw metrics into selected scale.  Data input format: metricId, timestamp, value  Data output format: metricId, timestamp, scale, value  |  + |
-|1. Sqoop producer   | +  |
-|3. Cassandra   | + |
-|1. Ignite | +  |
   
