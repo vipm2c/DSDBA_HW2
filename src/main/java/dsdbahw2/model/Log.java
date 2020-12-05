@@ -5,6 +5,11 @@ import org.apache.ignite.cache.query.annotations.QuerySqlField;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * Data class to load data from Cassandra
+ *
+ */
+
 public class Log implements Serializable{
     @QuerySqlField
     private Integer id;

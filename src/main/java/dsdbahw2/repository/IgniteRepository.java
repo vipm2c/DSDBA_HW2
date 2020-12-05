@@ -47,6 +47,13 @@ public class IgniteRepository {
         return null;
     }
 
+    /**
+     * Load data from Ignite cache and round datetime to scale
+     *
+     * @param scale
+     *       scale to round datetime.
+     */
+
     public static List<ComputeLog> selectFromIgnite(String scale) throws ParseException {
         IgniteCache<Long, Log> cache = IgniteLoader.ignite.getOrCreateCache("Log");
         // Load cache with data from the database.

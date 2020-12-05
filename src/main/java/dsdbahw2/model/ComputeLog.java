@@ -6,6 +6,10 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Date;
 
+/**
+ * Data class for computing Log
+ */
+
 public class ComputeLog implements Serializable {
 
     private Integer key;
@@ -41,6 +45,13 @@ public class ComputeLog implements Serializable {
     public void setValue(Integer value) {
         this.value = value;
     }
+
+    /**
+     * Round datetime of object ComputeLog to scale
+     *
+     * @param scale
+     *            scale to round datetime.
+     */
 
     public void scaleTimeStamp(String scale){
         Scale util = new Scale(scale);

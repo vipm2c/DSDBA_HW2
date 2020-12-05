@@ -2,9 +2,22 @@ package dsdbahw2.compute;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Class to round datetime
+ *
+ */
+
 public class Scale {
 
     private long scale;
+
+    /**
+     * Convert data from rawScale(String) to scale(Long)
+     *
+     * @param rawScale
+     *       String scale to round datetime.
+     */
+
 
     public Scale(String rawScale) {
         if (rawScale.endsWith("ms")) {
@@ -20,9 +33,22 @@ public class Scale {
         }
     }
 
+    /**
+     * Round timestamp(Long) by scale(Long)
+     *
+     * @param timestamp
+     *       String scale to round datetime.
+     */
+
     public long getNewTime(long timestamp) {
         long mod = timestamp % scale;
         long result = timestamp - mod;
+
+        /**
+         *
+         * @return new rounded timestamp.
+         */
+        
         return result;
     }
 }

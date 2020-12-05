@@ -5,6 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 import dsdbahw2.ignite.IgniteLoader;
+/**
+ * Main class
+ * Start Spring application and
+ * Load data from Cassandra to Ignite
+ */
 
 @SpringBootApplication
 @ComponentScan

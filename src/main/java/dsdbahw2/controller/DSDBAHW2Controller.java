@@ -16,7 +16,13 @@ import java.util.stream.Collectors;
 
 @RestController
 public class DSDBAHW2Controller {
-
+    /**
+     * Get data from cassandra, round datetime to scale and group by Key and Date
+     * number.
+     *
+     * @param scale
+     *            scale to round datetime.
+     */
     @RequestMapping(value="/fetch/cassandra/ignite/{scale}")
     public List<String> getCassandraDataUsingIgnite(@PathVariable("scale") String scale) throws ParseException {
         List<String> logs =  new ArrayList<>();
